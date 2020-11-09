@@ -1,4 +1,9 @@
 body {
-    background-color: black;
+    background-color: rgb(24, 24, 24);
     color: white;
+}
+
+button {
+    background-color: cadetblue;
+    border: 1px solid black;
 }

@@ -78,7 +78,7 @@ main , footer{
   }
   
   input:checked + .slider {
-    background-color: #0a0a0a;
+    background-color: cadetblue;
   }
   
   input:checked + .slider:before {
