@@ -1,15 +1,33 @@
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
+    let darkSwitch = document.querySelector("#darkSwitch");
+    let cssLink = document.querySelector("#link");
+    let buttons = document.querySelectorAll("input[type=button]")
+    let textOutput = document.querySelector("input[type=text]")
 
-
-
-    document.querySelector("#darkSwitch").addEventListener("click", function() {
-        if(this.value === "false") {
-            document.querySelector("#link").href = "css/keyboard-dark.css";
+    // Dark Mode 
+    darkSwitch.addEventListener("click", function () {
+        if (this.value === "false") {
+            cssLink.href = "css/keyboard-dark.css";
             this.value = "true"
         } else {
-            document.querySelector("#link").href = "css/keyboard-light.css";
+            cssLink.href = "css/keyboard-light.css";
             this.value = "false";
         }
-        console.log(this.value)
     })
+
+    buttons.forEach(button =>
+        button.addEventListener("click", function () {
+            switch (this.value) {
+                case "SPACE":
+                    textOutput.value += " ";
+                    break;
+                case "Delete":
+                    textOutput.value = textOutput.value.substring(0, textOutput.value.length-1);
+                    break;
+                default:
+                    textOutput.value += this.value;
+            }
+        })
+    )
+
 })
