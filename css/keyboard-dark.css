@@ -3,7 +3,7 @@ body {
     color: white;
 }
 
-button {
+input[type=button] {
     background-color: cadetblue;
     border: 1px solid black;
 }
