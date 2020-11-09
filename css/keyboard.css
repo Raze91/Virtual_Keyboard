@@ -1,0 +1,33 @@
+main , footer{
+    text-align: center;
+}
+
+.light_dark {
+    text-align: end;
+}
+
+#text-output {
+    width: 40%;
+    margin: auto;
+}
+
+#text-output input {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+#keyboard {
+    display: flex;
+    flex-direction: column;
+}
+
+#keyboard .space {
+    width: 10%;
+    margin: auto;
+}
+
+#keyboard button {
+    padding: 10px;
+    margin: 0 2px;
+}
