@@ -27,6 +27,9 @@ window.addEventListener("load", function () {
                 case "Enter":
                     textOutput.value += "\n"; 
                     break;
+                case "Tab":
+                    textOutput.value += "   "
+                    break;
                 default:
                     textOutput.value += this.value;
             }
