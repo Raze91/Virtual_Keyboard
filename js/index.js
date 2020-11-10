@@ -24,6 +24,9 @@ window.addEventListener("load", function () {
                 case "Delete":
                     textOutput.value = textOutput.value.substring(0, textOutput.value.length-1);
                     break;
+                case "Enter":
+                    textOutput.value += "\n"; 
+                    break;
                 default:
                     textOutput.value += this.value;
             }
