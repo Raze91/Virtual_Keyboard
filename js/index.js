@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
     let darkSwitch = document.querySelector("#darkSwitch");
     let cssLink = document.querySelector("#link");
     let buttons = document.querySelectorAll("input[type=button]")
-    let textOutput = document.querySelector("input[type=text]")
+    let textOutput = document.querySelector("#text-output")
 
     // Dark Mode 
     darkSwitch.addEventListener("click", function () {

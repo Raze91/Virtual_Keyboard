@@ -2,12 +2,12 @@ main , footer{
     text-align: center;
 }
 
-#text-output {
+#text-output-ctnr {
     width: 45%;
     margin: auto;
 }
 
-#text-output input {
+#text-output-ctnr #text-output {
     width: 100%;
     height: 200px;
     margin: 20px 0;
