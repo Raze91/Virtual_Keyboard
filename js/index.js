@@ -16,17 +16,29 @@ window.addEventListener("load", function () {
             cssLink.href = "css/keyboard-light.css";
             this.value = "false";
         }
-    })
+    });
 
-    capsLock.addEventListener("click", function() {
-        if(isCapsLock === false) {
+    // Caps Lock
+    capsLock.addEventListener("click", function () {
+        if (isCapsLock === false) {
             circle.style.backgroundColor = "green";
             isCapsLock = true;
+
+            document.querySelectorAll(".letter").forEach(button =>
+                button.value = button.value.toUpperCase()
+            )
+
         } else {
             circle.style.backgroundColor = "red";
             isCapsLock = false;
+
+            document.querySelectorAll(".letter").forEach(button => 
+                button.value = button.value.toLowerCase()    
+            )
         }
-    })
+    });
+
+    // onclick
     buttons.forEach(button =>
         button.addEventListener("click", function () {
             switch (this.value) {
@@ -34,10 +46,10 @@ window.addEventListener("load", function () {
                     textOutput.value += " ";
                     break;
                 case "Delete":
-                    textOutput.value = textOutput.value.substring(0, textOutput.value.length-1);
+                    textOutput.value = textOutput.value.substring(0, textOutput.value.length - 1);
                     break;
                 case "Enter":
-                    textOutput.value += "\n"; 
+                    textOutput.value += "\n";
                     break;
                 case "Tab":
                     textOutput.value += "   "
