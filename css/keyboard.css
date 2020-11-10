@@ -18,7 +18,10 @@ main , footer{
     flex-direction: column;
 }
 
-#keyboard div {
+.first-row, 
+.second-row,
+.thrid-row,
+.last-row {
     margin: 3px;
 }
 
@@ -37,6 +40,13 @@ main , footer{
   margin: 0 2px;
 }
 
+.circle {
+  background: #f00;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inherit;
+}
 /**********************/
 /******* SWITCH *******/
 /**********************/

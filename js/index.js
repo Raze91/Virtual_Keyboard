@@ -1,8 +1,11 @@
 window.addEventListener("load", function () {
     let darkSwitch = document.querySelector("#darkSwitch");
     let cssLink = document.querySelector("#link");
-    let buttons = document.querySelectorAll("input[type=button]")
-    let textOutput = document.querySelector("#text-output")
+    let buttons = document.querySelectorAll("input[type=button]");
+    let textOutput = document.querySelector("#text-output");
+    let capsLock = document.querySelector("#caps-lock");
+    let circle = document.querySelector(".circle");
+    let isCapsLock = false;
 
     // Dark Mode 
     darkSwitch.addEventListener("click", function () {
@@ -15,6 +18,15 @@ window.addEventListener("load", function () {
         }
     })
 
+    capsLock.addEventListener("click", function() {
+        if(isCapsLock === false) {
+            circle.style.backgroundColor = "green";
+            isCapsLock = true;
+        } else {
+            circle.style.backgroundColor = "red";
+            isCapsLock = false;
+        }
+    })
     buttons.forEach(button =>
         button.addEventListener("click", function () {
             switch (this.value) {
