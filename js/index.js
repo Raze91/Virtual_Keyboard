@@ -32,13 +32,10 @@ window.addEventListener("load", function () {
                 button.value = button.value.toUpperCase()
             )
 
-            for(let i = 0; i<specials.length;i++) {
-                for(let j = 0; j < majArray.length; i++) {
-                    console.log(specials[i])
-                    specials[i].value = majArray[i];
-                }
+            for (let i = 0; i < specials.length; i++) {
+                specials[i].value = majArray[i];
             }
-            
+
         } else {
             circle.style.backgroundColor = "red";
             isCapsLock = false;
@@ -47,10 +44,8 @@ window.addEventListener("load", function () {
                 button.value = button.value.toLowerCase()
             )
 
-            for(let i = 0; i<specials.length;i++) {
-                for(let j = 0; j < minArray.length; i++) {
-                    specials[i].value = minArray[i];
-                }
+            for (let i = 0; i < specials.length; i++) {
+                specials[i].value = minArray[i];
             }
         }
     });
