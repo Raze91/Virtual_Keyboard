@@ -1,11 +1,15 @@
 window.addEventListener("load", function () {
-    let darkSwitch = document.querySelector("#darkSwitch");
-    let cssLink = document.querySelector("#link");
-    let buttons = document.querySelectorAll("input[type=button]");
-    let textOutput = document.querySelector("#text-output");
-    let capsLock = document.querySelector("#caps-lock");
-    let circle = document.querySelector(".circle");
+    const darkSwitch = document.querySelector("#darkSwitch");
+    const cssLink = document.querySelector("#link");
+    const buttons = document.querySelectorAll("input[type=button]");
+    const textOutput = document.querySelector("#text-output");
+    const capsLock = document.querySelector("#caps-lock");
+    const circle = document.querySelector(".circle");
+    let specials = document.querySelectorAll(".special")
     let isCapsLock = false;
+
+    let majArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "°", "+", "¨", "£", "%", "µ", ">", "?", ".", "/", "§"];
+    let minArray = ["&", "é", "\"", "'", "(", "-", "è", "_", "ç", "à", ")", "=", "^", "$", "ù", "*", "<", ",", ";", ":", "!"];
 
     // Dark Mode 
     darkSwitch.addEventListener("click", function () {
@@ -28,13 +32,26 @@ window.addEventListener("load", function () {
                 button.value = button.value.toUpperCase()
             )
 
+            for(let i = 0; i<specials.length;i++) {
+                for(let j = 0; j < majArray.length; i++) {
+                    console.log(specials[i])
+                    specials[i].value = majArray[i];
+                }
+            }
+            
         } else {
             circle.style.backgroundColor = "red";
             isCapsLock = false;
 
-            document.querySelectorAll(".letter").forEach(button => 
-                button.value = button.value.toLowerCase()    
+            document.querySelectorAll(".letter").forEach(button =>
+                button.value = button.value.toLowerCase()
             )
+
+            for(let i = 0; i<specials.length;i++) {
+                for(let j = 0; j < minArray.length; i++) {
+                    specials[i].value = minArray[i];
+                }
+            }
         }
     });
 
