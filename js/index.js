@@ -23,11 +23,7 @@ window.addEventListener("load", function () {
     // Dark Mode 
     cssLink.href = "css/keyboard-dark.css";
     darkSwitch.addEventListener("click", function () {
-        if (this.checked === true) {
-            cssLink.href = "css/keyboard-dark.css";
-        } else {
-            cssLink.href = "css/keyboard-light.css";
-        }
+        this.checked ? cssLink.href = "css/keyboard-dark.css" : cssLink.href = "css/keyboard-light.css"; 
     });
 
     // Qwerty / Azerty
@@ -47,13 +43,13 @@ window.addEventListener("load", function () {
 
     // Caps Lock
     capsLock.addEventListener("click", function () {
-        togglecapsLock();
+        isCapsLock = !isCapsLock;
         capsLocked(isCapsLock, capsCircle);
     });
 
     // Shift
     shift.addEventListener("click", function () {
-        toggleShift();
+        isShift = !isShift;
         capsLocked(isShift, shiftCircle);
     })
 
@@ -87,13 +83,6 @@ window.addEventListener("load", function () {
         }
     }
 
-    function togglecapsLock() {
-        isCapsLock = !isCapsLock;
-    }
-    function toggleShift() {
-        isShift = !isShift;
-    }
-
     // onclick
     buttons.forEach(button =>
         button.addEventListener("click", function () {
@@ -112,7 +101,7 @@ window.addEventListener("load", function () {
                     break;
                 default:
                     if (isShift === true) {
-                        toggleShift();
+                        isShift = !isShift;
                         textOutput.value += this.value;
                         capsLocked(isShift, shiftCircle)
                     } else {
