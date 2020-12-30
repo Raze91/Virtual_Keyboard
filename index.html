@@ -13,12 +13,21 @@
 <body>
     <main>
         <h1 class="title">Bienvenue sur mon clavier virtuel !</h1>
-        <div>
-            <p>Light / Dark</p>
-            <label class="switch">
-                <input id="darkSwitch" type="checkbox" checked>
-                <span class="slider round"></span>
-            </label>
+        <div class="switch-ctnr">
+            <div class="LD">
+                <p>Light / Dark</p>
+                <label class="switch">
+                    <input id="darkSwitch" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="AQ">
+                <p>Azerty / Qwerty</p>
+                <label class="switch">
+                    <input id="keyboardSwitch" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
         </div>
         <div id="text-output-ctnr">
             <textarea name="text-output" id="text-output" cols="30" rows="10"></textarea>

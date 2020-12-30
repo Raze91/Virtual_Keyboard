@@ -59,7 +59,14 @@ main , footer{
 /******* SWITCH *******/
 /**********************/
 
+.switch-ctnr {
+  display: flex;
+  justify-content: center;
+}
 
+.LD, .AQ {
+  padding: 10px;
+}
 /* The switch - the box around the slider */
 .switch {
     position: relative;
