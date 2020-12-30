@@ -8,8 +8,6 @@ window.addEventListener("load", function () {
     const capsCircle = document.querySelector(".capsCircle");
     const shift = document.querySelector("#shift");
     const shiftCircle = document.querySelector(".shiftCircle");
-    const specials = document.querySelectorAll(".special")
-    const letters = document.querySelectorAll(".letter");
     let isCapsLock = false;
     let isShift = false;
     let isAzerty = true;
@@ -21,9 +19,6 @@ window.addEventListener("load", function () {
     const minQwerty = ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "Delete", "Tab", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'", "Enter", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/"];
 
     const majQwerty = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "Delete", "Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "{", "}", "|", "A", "S", "D", "F", "G", "H", "J", "K", "L", ":", '"', "Enter", "Z", "X", "C", "V", "B", "N", "M", "<", ">", "?"]
-
-    let majArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "°", "+", "¨", "£", "%", "µ", ">", "?", ".", "/", "§"];
-    let minArray = ["&", "é", "\"", "'", "(", "-", "è", "_", "ç", "à", ")", "=", "^", "$", "ù", "*", "<", ",", ";", ":", "!"];
 
     // Dark Mode 
     cssLink.href = "css/keyboard-dark.css";
@@ -66,21 +61,27 @@ window.addEventListener("load", function () {
         if (boolean === true) {
             circle.style.backgroundColor = "green";
 
-            document.querySelectorAll(".letter").forEach(button =>
-                button.value = button.value.toUpperCase()
-            )
-
-            for (let i = 0; i < specials.length; i++) {
-                specials[i].value = majArray[i];
+            if (isAzerty === true) {
+                for (let i = 0; i < majAzerty.length; i++) {
+                    buttons[i].value = majAzerty[i];
+                }
+            } else {
+                for (let i = 0; i < majQwerty.length; i++) {
+                    buttons[i].value = majQwerty[i];
+                }
             }
         } else {
             circle.style.backgroundColor = "red";
+
             if (isCapsLock === false) {
-                document.querySelectorAll(".letter").forEach(button =>
-                    button.value = button.value.toLowerCase()
-                )
-                for (let i = 0; i < specials.length; i++) {
-                    specials[i].value = minArray[i];
+                if (isAzerty === true) {
+                    for (let i = 0; i < minAzerty.length; i++) {
+                        buttons[i].value = minAzerty[i];
+                    }
+                } else {
+                    for (let i = 0; i < minQwerty.length; i++) {
+                        buttons[i].value = minQwerty[i];
+                    }
                 }
             }
         }
@@ -117,9 +118,7 @@ window.addEventListener("load", function () {
                     } else {
                         textOutput.value += this.value;
                     }
-
             }
         })
     )
-
 })
