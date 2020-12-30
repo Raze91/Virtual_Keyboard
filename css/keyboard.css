@@ -49,9 +49,14 @@ main , footer{
   display: inherit;
 }
 
-.letter,
-.special {
+input {
   width: 35px;
+  height: 35px;
+  text-align: center;
+}
+
+.special {
+  width: 60px;
   height: 35px;
   text-align: center;
 }
