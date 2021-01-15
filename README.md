@@ -2,14 +2,14 @@
 
 ## English
 
-Virtual Keyboard with HTML, CSS and Javascript.
+Virtual Keyboard with HTML, CSS and Javascript with JQuery.
 
-[Project link](https://sami-hattab.alwaysdata.net/projects/Virtual_Keyboard/index.html)
+[Project link](http://sami-hattab.alwaysdata.net/Virtual-Keyboard/)
 
 ***
 
 ## Français
 
-Clavier Virtuel avec de l'HTML, CSS et Javascript
+Clavier Virtuel avec de l'HTML, CSS et Javascript avec JQuery.
 
-[Lien du projet](https://sami-hattab.alwaysdata.net/projects/Virtual_Keyboard/index.html)
+[Lien du projet](http://sami-hattab.alwaysdata.net/Virtual-Keyboard/)
