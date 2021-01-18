@@ -1,5 +1,31 @@
+body {
+  margin: 0;
+}
+header nav {
+  background-color: #11798e;
+}
+header nav ul{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+header nav ul li, 
+header nav ul li a {
+  color: white;
+}
+header a {
+  text-decoration: none;
+  margin: auto 0;
+}
 main , footer{
     text-align: center;
+}
+
+main h1 {
+  margin-bottom: 0;
 }
 
 #text-output-ctnr {
@@ -72,6 +98,7 @@ input {
 .LD, .AQ {
   padding: 10px;
 }
+
 /* The switch - the box around the slider */
 .switch {
     position: relative;
