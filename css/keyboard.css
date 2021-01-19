@@ -51,7 +51,7 @@ main h1 {
     margin: 3px;
 }
 
-#keyboard .space {
+#keyboard #space {
     width: 10%;
     margin: 5px auto;
 }
@@ -68,6 +68,7 @@ main h1 {
 
 .capsCircle , 
 .shiftCircle {
+  margin-left: 5px;
   background: #f00;
   width: 7px;
   height: 7px;
@@ -153,3 +154,17 @@ input {
   .slider.round:before {
     border-radius: 50%;
   }
+
+@media (max-width: 500px) {
+  #text-output-ctnr {
+    width: 80%;
+  }
+  #keyboard div {
+    display: flex;
+    margin: 0;
+  }
+  #keyboard input {
+    padding: 5px;
+    margin: 0;
+  }
+}

@@ -7,6 +7,8 @@
     <title>Virtual Keyboard - Sami Hattab</title>
     <link rel="stylesheet" href="css/keyboard.css">
     <link id="link" rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <script src="js/index.js"></script>
 </head>
 
@@ -56,10 +58,10 @@
                 <input type="button" value="à">
                 <input type="button" value=")">
                 <input type="button" value="=">
-                <input class="special" type="button" value="Delete">
+                <button id="delete"><i class="fas fa-backspace"></i></button>
             </div>
             <div class="second-row">
-                <input class="special" type="button" value="Tab">
+                <button id="tab"><i class="fas fa-exchange-alt"></i></button>
                 <input type="button" value="a">
                 <input type="button" value="z">
                 <input type="button" value="e">
@@ -74,9 +76,7 @@
                 <input type="button" value="$">
             </div>
             <div class="third-row">
-                <button id="caps-lock">Caps Lock
-                    <div class="capsCircle"></div>
-                </button>
+                <button id="caps-lock"><i class="fas fa-lock"></i><div class="capsCircle"></div></button>
                 <input type="button" value="q">
                 <input type="button" value="s">
                 <input type="button" value="d">
@@ -89,12 +89,10 @@
                 <input type="button" value="m">
                 <input type="button" value="ù">
                 <input type="button" value="*">
-                <input class="special" type="button" value="Enter">
+                <button id="enter"><i class="fas fa-level-down-alt fa-rotate-90"></i></button>
             </div>
             <div class="last-row">
-                <button id="shift">Shift
-                    <div class="shiftCircle"></div>
-                </button>
+                <button id="shift"><i class="far fa-arrow-alt-circle-up"></i><div class="shiftCircle"></div></button>
                 <input type="button" value="<">
                 <input type="button" value="w">
                 <input type="button" value="x">
@@ -107,7 +105,7 @@
                 <input type="button" value=":">
                 <input type="button" value="!">
             </div>
-            <input class="space" type="button" value="SPACE">
+            <button id="space"><i class="fas fa-arrows-alt-h"></i></button>
         </div>
     </main>
     <footer>
