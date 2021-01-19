@@ -97,7 +97,6 @@ window.addEventListener("load", function () {
         })
     )
     specialButtons.forEach(button => {
-        console.log(button.id)
         button.addEventListener("click", function () {
             switch (this.id) {
                 case "caps-lock":

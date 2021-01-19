@@ -52,8 +52,8 @@ main h1 {
 }
 
 #keyboard #space {
-    width: 10%;
-    margin: 5px auto;
+  margin: 5px auto;
+  width: 30%;
 }
 
 #keyboard button {
@@ -163,8 +163,11 @@ input {
     display: flex;
     margin: 0;
   }
-  #keyboard input {
+  #keyboard input, #keyboard button{
     padding: 5px;
     margin: 0;
+  }
+  #keyboard #space {
+    width: 60%;
   }
 }
